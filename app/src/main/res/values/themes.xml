@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MoviesDB" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/blue_dark</item>
     </style>
 
     <style name="Theme.MoviesDB" parent="Base.Theme.MoviesDB" />
