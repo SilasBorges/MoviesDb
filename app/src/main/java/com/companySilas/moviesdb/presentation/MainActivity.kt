@@ -1,7 +1,8 @@
-package com.companySilas.moviesdb
+package com.companySilas.moviesdb.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.companySilas.moviesdb.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
