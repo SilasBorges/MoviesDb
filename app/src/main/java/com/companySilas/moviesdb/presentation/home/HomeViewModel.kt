@@ -6,15 +6,23 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.companysilas.core.domain.model.DataNowPlaying
 import com.companysilas.core.usecase.NowPlayingUseCase
+import com.companysilas.core.usecase.UpcomingUseCase
 import kotlinx.coroutines.flow.Flow
 
 class HomeViewModel(
-    private val nowPlayingUseCase: NowPlayingUseCase
+    private val nowPlayingUseCase: NowPlayingUseCase,
+    private val upcomingUseCase: UpcomingUseCase
 ): ViewModel() {
 
     fun nowPlayingPagingData(): Flow<PagingData<DataNowPlaying>> {
         return nowPlayingUseCase(
             NowPlayingUseCase.Params
+        ).cachedIn(viewModelScope)
+    }
+
+    fun upComingPagingData(): Flow<PagingData<DataNowPlaying>> {
+        return upcomingUseCase(
+            UpcomingUseCase.Params
         ).cachedIn(viewModelScope)
     }
 }

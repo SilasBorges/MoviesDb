@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/text_more_popular"
+                android:text="@string/text_top_rated"
                 android:textColor="@color/gray_light"
                 android:textSize="21sp"
                 app:layout_constraintStart_toStartOf="parent"

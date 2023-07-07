@@ -10,4 +10,10 @@ interface ApiService {
     suspend fun nowPlaying(
         @QueryMap queries: Map<String, String>
     ) : NowPlayingResponse
+
+    @GET("upcoming")
+    suspend fun upcoming(
+        @QueryMap queries: Map<String, String>
+    ) : NowPlayingResponse
+
 }

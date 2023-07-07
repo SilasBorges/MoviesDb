@@ -5,7 +5,7 @@ import androidx.paging.PagingState
 import com.companySilas.moviesdb.framework.service.ApiService
 import com.companysilas.core.domain.model.DataNowPlaying
 
-class NowPlayingPagingSource(
+class UpcomingPagingSource(
     private val apiService: ApiService
 ) : PagingSource<Int, DataNowPlaying>() {
 
@@ -21,7 +21,7 @@ class NowPlayingPagingSource(
                 "region" to REGION
             )
 
-            val paging = apiService.nowPlaying(queries)
+            val paging = apiService.upcoming(queries)
 
             val responseOffset = paging.page
             val totalMarket = paging.totalPages

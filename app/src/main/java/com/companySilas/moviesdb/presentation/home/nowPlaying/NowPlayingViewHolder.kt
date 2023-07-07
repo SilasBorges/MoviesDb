@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.companySilas.moviesdb.R
 import com.companySilas.moviesdb.databinding.ItemMovieBinding
 import com.companysilas.core.domain.model.DataNowPlaying
 
@@ -19,6 +20,7 @@ class NowPlayingViewHolder(
         Glide
             .with(context)
             .load("https://image.tmdb.org/t/p/w500${data.posterPath}")
+            .placeholder(R.drawable.background_imageload)
             .centerCrop()
             .into(binding.imageMovie)
     }
