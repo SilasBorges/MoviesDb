@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.companySilas.moviesdb.R
 import com.companySilas.moviesdb.databinding.ActivitySplashBinding
+import com.companySilas.moviesdb.presentation.home.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 
