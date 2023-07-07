@@ -16,4 +16,9 @@ interface ApiService {
         @QueryMap queries: Map<String, String>
     ) : NowPlayingResponse
 
+    @GET("popular")
+    suspend fun popular(
+        @QueryMap queries: Map<String, String>
+    ) : NowPlayingResponse
+
 }
