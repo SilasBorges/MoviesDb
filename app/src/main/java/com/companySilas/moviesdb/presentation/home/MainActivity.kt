@@ -6,8 +6,8 @@ import androidx.lifecycle.lifecycleScope
 import com.companySilas.moviesdb.databinding.ActivityMainBinding
 import com.companySilas.moviesdb.presentation.home.nowPlaying.NowPlayingAdapter
 import com.companySilas.moviesdb.presentation.home.popular.PopularAdapter
+import com.companySilas.moviesdb.presentation.home.toprated.TopRatedAdapter
 import com.companySilas.moviesdb.presentation.home.upComing.UpComingAdapter
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -29,12 +29,17 @@ class MainActivity : AppCompatActivity() {
         PopularAdapter{}
     }
 
+    private val topRatedAdapter by lazy {
+        TopRatedAdapter{}
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         initNowPlaying()
         initUpcoming()
         initPopular()
+        initTopRated()
         setContentView(binding.root)
     }
 
@@ -61,6 +66,15 @@ class MainActivity : AppCompatActivity() {
             viewModel.popularPagingData().collect() { pagingData ->
                 binding.rvMorePopular.adapter = popularAdapter
                 popularAdapter.submitData(pagingData)
+            }
+        }
+    }
+
+    private fun initTopRated() {
+        lifecycleScope.launch {
+            viewModel.topRatedPagingData().collect() { pagingData ->
+                binding.rvBestRated.adapter = topRatedAdapter
+                topRatedAdapter.submitData(pagingData)
             }
         }
     }

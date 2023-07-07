@@ -21,4 +21,9 @@ interface ApiService {
         @QueryMap queries: Map<String, String>
     ) : NowPlayingResponse
 
+    @GET("top_rated")
+    suspend fun topRated(
+        @QueryMap queries: Map<String, String>
+    ) : NowPlayingResponse
+
 }
