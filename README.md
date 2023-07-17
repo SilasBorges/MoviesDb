@@ -2,7 +2,7 @@
 
 A MovieDb for Android. Designed to improve knowledge
 
-- API consumption. The app movideDb Api (https://api.themoviedb.org/3/movie/).
+- API consumption. The app movideDb Api (https://developer.themoviedb.org/reference/intro/getting-started).
 - MVVM architecture. The app is based on modern Android components and MVVM architecture.
 - Clean Architecture. It's development follows clean architecture practices, such as separation of core, domain, data and presentation layers.
 - UX/UI. Creating a modern, crisp and accessible interface using Google Material Design components.
