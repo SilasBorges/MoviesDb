@@ -25,3 +25,5 @@ fun provideOkHttpClient(authInterceptor: AuthInterceptor) : OkHttpClient {
 }
 
 fun provideForecastApi(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+
+

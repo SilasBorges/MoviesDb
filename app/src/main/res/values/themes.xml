@@ -6,4 +6,19 @@
     </style>
 
     <style name="Theme.MoviesDB" parent="Base.Theme.MoviesDB" />
+
+    <style name="ImageBanner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">27dp</item>
+        <item name="cornerSizeBottomRight">27dp</item>
+    </style>
+
+    <style name="ImageMovie" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">12dp</item>
+        <item name="cornerSizeBottomRight">12dp</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+        <item name="cornerSizeTopRight">12dp</item>
+        <item name="elevation">10dp</item>
+    </style>
 </resources>

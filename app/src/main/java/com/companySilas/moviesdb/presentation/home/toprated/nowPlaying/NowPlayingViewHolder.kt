@@ -1,4 +1,4 @@
-package com.companySilas.moviesdb.presentation.home.nowPlaying
+package com.companySilas.moviesdb.presentation.home.toprated.nowPlaying
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -23,6 +23,10 @@ class NowPlayingViewHolder(
             .placeholder(R.drawable.background_imageload)
             .centerCrop()
             .into(binding.imageMovie)
+
+        itemView.setOnClickListener {
+            clickListener.invoke(data)
+        }
     }
 
     companion object {

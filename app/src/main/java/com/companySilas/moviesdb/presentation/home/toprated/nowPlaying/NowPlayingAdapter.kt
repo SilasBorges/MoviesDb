@@ -1,4 +1,4 @@
-package com.companySilas.moviesdb.presentation.home.nowPlaying
+package com.companySilas.moviesdb.presentation.home.toprated.nowPlaying
 
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter

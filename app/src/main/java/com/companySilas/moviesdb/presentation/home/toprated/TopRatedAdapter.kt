@@ -3,7 +3,7 @@ package com.companySilas.moviesdb.presentation.home.toprated
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import com.companySilas.moviesdb.presentation.home.nowPlaying.NowPlayingViewHolder
+import com.companySilas.moviesdb.presentation.home.toprated.nowPlaying.NowPlayingViewHolder
 import com.companysilas.core.domain.model.DataNowPlaying
 
 class TopRatedAdapter(

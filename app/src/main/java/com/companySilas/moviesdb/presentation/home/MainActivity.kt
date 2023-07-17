@@ -1,10 +1,12 @@
 package com.companySilas.moviesdb.presentation.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.companySilas.moviesdb.databinding.ActivityMainBinding
-import com.companySilas.moviesdb.presentation.home.nowPlaying.NowPlayingAdapter
+import com.companySilas.moviesdb.presentation.detail.DetailsActivity
+import com.companySilas.moviesdb.presentation.home.toprated.nowPlaying.NowPlayingAdapter
 import com.companySilas.moviesdb.presentation.home.popular.PopularAdapter
 import com.companySilas.moviesdb.presentation.home.toprated.TopRatedAdapter
 import com.companySilas.moviesdb.presentation.home.upComing.UpComingAdapter
@@ -18,19 +20,35 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: HomeViewModel by viewModel()
 
     private val nowPlayingAdapter by lazy {
-        NowPlayingAdapter{}
+        NowPlayingAdapter{
+            val intent = Intent(this, DetailsActivity::class.java)
+            intent.putExtra("id", it.id)
+            startActivity(intent)
+        }
     }
 
     private val upComingAdapter by lazy {
-        UpComingAdapter{}
+        UpComingAdapter{
+            val intent = Intent(this, DetailsActivity::class.java)
+            intent.putExtra("id", it.id)
+            startActivity(intent)
+        }
     }
 
     private val popularAdapter by lazy {
-        PopularAdapter{}
+        PopularAdapter{
+            val intent = Intent(this, DetailsActivity::class.java)
+            intent.putExtra("id", it.id)
+            startActivity(intent)
+        }
     }
 
     private val topRatedAdapter by lazy {
-        TopRatedAdapter{}
+        TopRatedAdapter{
+            val intent = Intent(this, DetailsActivity::class.java)
+            intent.putExtra("id", it.id)
+            startActivity(intent)
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

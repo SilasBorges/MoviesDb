@@ -48,4 +48,8 @@
     <string name="text_brief">Em breve</string>
     <string name="text_more_popular">Mais Populares</string>
     <string name="text_top_rated">Melhores Avaliados</string>
+    <string name="text_vote"> / 10 Média de Votos</string>
+    <string name="synopsys">Sinopse</string>
+    <string name="comments">Comentários</string>
+    <string name="more_like">Mais Como Este </string>
 </resources>

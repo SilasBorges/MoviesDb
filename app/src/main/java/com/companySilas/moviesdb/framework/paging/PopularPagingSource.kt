@@ -15,7 +15,6 @@ class PopularPagingSource(
             val page = params.key ?: 1
 
             val queries = hashMapOf(
-                "api_key" to APIKEY,
                 "language" to LANGUAGE,
                 "page" to page.toString(),
                 "region" to REGION
@@ -51,6 +50,5 @@ class PopularPagingSource(
         private const val LIMIT = 20
         private const val LANGUAGE = "pt-BR"
         private const val REGION = "BR"
-        private const val APIKEY = "d326d5ef48c3079486447c525573582a"
     }
 }
