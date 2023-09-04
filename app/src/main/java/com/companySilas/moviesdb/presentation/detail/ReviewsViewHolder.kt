@@ -15,8 +15,11 @@ class ReviewsViewHolder(
 
     fun bind(data: DataReview) {
 
+
         binding.textName.text = data.author
         binding.textDescComments.text = data.content
+
+
 
     }
 

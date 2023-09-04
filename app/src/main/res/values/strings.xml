@@ -5,6 +5,9 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
+    <string name="error_loading_data">Erro ao carregar os dados</string>
+    <string name="empty_comments">Esse filme não tem comentários</string>
+    <string name="common_try_again">Tente novamente</string>
     <string name="previous">Previous</string>
 
     <string name="lorem_ipsum">
