@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.transition.TransitionInflater
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.companySilas.moviesdb.databinding.ActivityDetailsBinding
@@ -96,6 +95,8 @@ class DetailsActivity : AppCompatActivity() {
                 DetailViewModel.State.Error -> {
                     binding.includeError.buttonRetry.setOnClickListener {
                         viewModel.loading(numberDetail)
+                        initReviews(numberDetail)
+                        initMovieSimilar(numberDetail)
                     }
 
                     FLIPPER_CHILD_POSITION_ERROR
@@ -107,13 +108,8 @@ class DetailsActivity : AppCompatActivity() {
     private fun initReviews(id: Int) {
         lifecycleScope.launch {
             viewModel.reviewsPagingData(id).collect { pagingData ->
-                pagingData?.let {
                     binding.includeSuccess.rvComments.adapter = reviewsAdapter
                     reviewsAdapter.submitData(pagingData)
-                }.run {
-                    binding.includeSuccess.rvComments.isVisible = false
-                    binding.includeSuccess.textEmpty.isVisible = true
-                }
             }
         }
     }

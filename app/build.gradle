@@ -89,6 +89,4 @@ dependencies {
     // Koin
     implementation "io.insert-koin:koin-android:3.1.5"
 
-    // Shimmer
-    implementation 'com.facebook.shimmer:shimmer:0.5.0'
 }
