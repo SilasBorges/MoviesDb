@@ -1,6 +1,5 @@
 package com.companysilas.core.domain.response
 
-import com.companysilas.core.domain.model.DataNowPlaying
 import com.companysilas.core.domain.model.DateExhibition
 import com.google.gson.annotations.SerializedName
 

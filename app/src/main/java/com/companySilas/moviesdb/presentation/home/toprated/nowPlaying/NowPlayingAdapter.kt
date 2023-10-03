@@ -3,7 +3,7 @@ package com.companySilas.moviesdb.presentation.home.toprated.nowPlaying
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import com.companysilas.core.domain.model.DataNowPlaying
+import com.companysilas.core.domain.response.DataNowPlaying
 
 class NowPlayingAdapter(
     private val adapterOnClick: (DataNowPlaying) -> Unit

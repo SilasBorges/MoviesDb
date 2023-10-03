@@ -9,8 +9,8 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.companySilas.moviesdb.util.watchStatus
-import com.companysilas.core.domain.model.DataNowPlaying
-import com.companysilas.core.domain.model.DataReview
+import com.companysilas.core.domain.response.DataNowPlaying
+import com.companysilas.core.domain.response.DataReview
 import com.companysilas.core.domain.response.DetailResponse
 import com.companysilas.core.usecase.DetailUseCase
 import com.companysilas.core.usecase.MovieSimilarUseCase

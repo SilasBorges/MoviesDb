@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.companySilas.moviesdb.R
 import com.companySilas.moviesdb.databinding.ItemMovieBinding
-import com.companysilas.core.domain.model.DataNowPlaying
+import com.companysilas.core.domain.response.DataNowPlaying
 
 class NowPlayingViewHolder(
     private val binding: ItemMovieBinding,

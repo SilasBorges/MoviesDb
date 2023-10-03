@@ -3,7 +3,7 @@ package com.companySilas.moviesdb.presentation.detail
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import com.companysilas.core.domain.model.DataReview
+import com.companysilas.core.domain.response.DataReview
 
 class ReviewsAdapter : PagingDataAdapter<DataReview, ReviewsViewHolder>(diffCallback) {
 

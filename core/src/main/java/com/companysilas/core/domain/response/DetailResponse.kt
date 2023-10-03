@@ -1,6 +1,5 @@
 package com.companysilas.core.domain.response
 
-import com.companysilas.core.domain.model.Genre
 import com.google.gson.annotations.SerializedName
 
 data class DetailResponse(

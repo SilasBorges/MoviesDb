@@ -3,7 +3,7 @@ package com.companysilas.core.usecase
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.companysilas.core.domain.model.DataReview
+import com.companysilas.core.domain.response.DataReview
 import com.companysilas.core.repository.ReviewsRepository
 import com.companysilas.core.usecase.base.PagingUseCase
 import kotlinx.coroutines.flow.Flow

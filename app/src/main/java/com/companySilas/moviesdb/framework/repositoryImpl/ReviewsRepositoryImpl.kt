@@ -3,8 +3,7 @@ package com.companySilas.moviesdb.framework.repositoryImpl
 import androidx.paging.PagingSource
 import com.companySilas.moviesdb.framework.paging.ReviewsPagingSource
 import com.companySilas.moviesdb.framework.service.ApiService
-import com.companysilas.core.domain.model.DataNowPlaying
-import com.companysilas.core.domain.model.DataReview
+import com.companysilas.core.domain.response.DataReview
 import com.companysilas.core.repository.ReviewsRepository
 
 class ReviewsRepositoryImpl(

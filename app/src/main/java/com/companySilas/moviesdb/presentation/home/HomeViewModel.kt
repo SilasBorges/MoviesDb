@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.companysilas.core.domain.model.DataNowPlaying
+import com.companysilas.core.domain.response.DataNowPlaying
 import com.companysilas.core.usecase.NowPlayingUseCase
 import com.companysilas.core.usecase.PopularUseCase
 import com.companysilas.core.usecase.TopRatedUseCase

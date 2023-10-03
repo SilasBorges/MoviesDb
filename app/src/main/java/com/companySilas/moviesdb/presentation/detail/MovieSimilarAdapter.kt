@@ -4,9 +4,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import com.companySilas.moviesdb.presentation.home.toprated.nowPlaying.NowPlayingViewHolder
-import com.companysilas.core.domain.model.AuthorDetails
-import com.companysilas.core.domain.model.DataNowPlaying
-import com.companysilas.core.domain.model.DataReview
+import com.companysilas.core.domain.response.DataNowPlaying
 
 class MovieSimilarAdapter(
     private val adapterOnClick: (DataNowPlaying) -> Unit

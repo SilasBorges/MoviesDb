@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import com.companySilas.moviesdb.presentation.home.toprated.nowPlaying.NowPlayingViewHolder
-import com.companysilas.core.domain.model.DataNowPlaying
+import com.companysilas.core.domain.response.DataNowPlaying
 
 class PopularAdapter(
     private val adapterOnClick: (DataNowPlaying) -> Unit

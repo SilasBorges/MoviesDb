@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.companySilas.moviesdb.databinding.ItemCommentsBinding
-import com.companysilas.core.domain.model.DataReview
+import com.companysilas.core.domain.response.DataReview
 
 class ReviewsViewHolder(
     private val binding: ItemCommentsBinding

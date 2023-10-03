@@ -1,7 +1,7 @@
 package com.companysilas.core.repository
 
 import androidx.paging.PagingSource
-import com.companysilas.core.domain.model.DataReview
+import com.companysilas.core.domain.response.DataReview
 
 interface ReviewsRepository {
 

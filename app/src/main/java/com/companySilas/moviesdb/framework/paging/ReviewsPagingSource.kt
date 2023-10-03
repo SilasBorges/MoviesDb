@@ -3,8 +3,7 @@ package com.companySilas.moviesdb.framework.paging
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.companySilas.moviesdb.framework.service.ApiService
-import com.companysilas.core.domain.model.DataNowPlaying
-import com.companysilas.core.domain.model.DataReview
+import com.companysilas.core.domain.response.DataReview
 
 class ReviewsPagingSource(
     private val apiService: ApiService,
