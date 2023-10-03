@@ -21,4 +21,31 @@
         <item name="cornerSizeTopRight">12dp</item>
         <item name="elevation">10dp</item>
     </style>
+
+    <!-- styleText -->
+    <style name="text_openSans_grey_13">
+        <item name="android:textSize">@dimen/text_13</item>
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/gray_light</item>
+    </style>
+
+    <style name="text_openSans_grey_12">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/gray_light</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="text_openSans_grey300_13">
+        <item name="android:textSize">@dimen/text_13</item>
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/gray_300</item>
+    </style>
+
+    <style name="text_openSans_grey_21">
+        <item name="android:textSize">@dimen/text_21</item>
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/gray_light</item>
+    </style>
+
 </resources>

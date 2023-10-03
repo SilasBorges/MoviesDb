@@ -15,9 +15,7 @@ class TopRatedPagingSource(
             val page = params.key ?: 1
 
             val queries = hashMapOf(
-                "language" to LANGUAGE,
-                "page" to page.toString(),
-                "region" to REGION
+                "page" to page.toString()
             )
 
             val paging = apiService.topRated(queries)
@@ -48,7 +46,5 @@ class TopRatedPagingSource(
 
     companion object {
         private const val LIMIT = 20
-        private const val LANGUAGE = "pt-BR"
-        private const val REGION = "BR"
     }
 }

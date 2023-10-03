@@ -16,9 +16,7 @@ class MovieSimilarPagingSource(
             val page = params.key ?: 1
 
             val queries = hashMapOf(
-                "language" to LANGUAGE,
                 "page" to page.toString(),
-                "region" to REGION
             )
 
             val paging = apiService.getMovieSimilar(id, queries)
@@ -49,7 +47,5 @@ class MovieSimilarPagingSource(
 
     companion object {
         private const val LIMIT = 20
-        private const val LANGUAGE = "pt-BR"
-        private const val REGION = "BR"
     }
 }

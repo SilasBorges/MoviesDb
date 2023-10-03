@@ -8,11 +8,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import com.companySilas.moviesdb.databinding.ActivityMainBinding
 import com.companySilas.moviesdb.presentation.detail.DetailsActivity
-import com.companySilas.moviesdb.presentation.home.toprated.nowPlaying.NowPlayingAdapter
 import com.companySilas.moviesdb.presentation.home.popular.PopularAdapter
 import com.companySilas.moviesdb.presentation.home.toprated.TopRatedAdapter
+import com.companySilas.moviesdb.presentation.home.toprated.nowPlaying.NowPlayingAdapter
 import com.companySilas.moviesdb.presentation.home.upComing.UpComingAdapter
-import com.facebook.shimmer.ShimmerFrameLayout
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -24,34 +23,26 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: HomeViewModel by viewModel()
 
     private val nowPlayingAdapter by lazy {
-        NowPlayingAdapter{
-            val intent = Intent(this, DetailsActivity::class.java)
-            intent.putExtra("id", it.id)
-            startActivity(intent)
+        NowPlayingAdapter {
+            initActivity(it.id)
         }
     }
 
     private val upComingAdapter by lazy {
-        UpComingAdapter{
-            val intent = Intent(this, DetailsActivity::class.java)
-            intent.putExtra("id", it.id)
-            startActivity(intent)
+        UpComingAdapter {
+            initActivity(it.id)
         }
     }
 
     private val popularAdapter by lazy {
-        PopularAdapter{
-            val intent = Intent(this, DetailsActivity::class.java)
-            intent.putExtra("id", it.id)
-            startActivity(intent)
+        PopularAdapter {
+            initActivity(it.id)
         }
     }
 
     private val topRatedAdapter by lazy {
-        TopRatedAdapter{
-            val intent = Intent(this, DetailsActivity::class.java)
-            intent.putExtra("id", it.id)
-            startActivity(intent)
+        TopRatedAdapter {
+            initActivity(it.id)
         }
     }
 
@@ -110,10 +101,13 @@ class MainActivity : AppCompatActivity() {
                         setShimmerVisibility(true)
                         FLIPPER_CHILD_LOADING
                     }
+
                     is LoadState.NotLoading -> {
                         setShimmerVisibility(false)
                         FLIPPER_CHILD_CHARACTERS
-                    } is LoadState.Error -> {
+                    }
+
+                    is LoadState.Error -> {
                         setShimmerVisibility(false)
                         binding.includeViewHomeErrorState.buttonRetry.setOnClickListener {
                             nowPlayingAdapter.retry()
@@ -131,10 +125,16 @@ class MainActivity : AppCompatActivity() {
     private fun setShimmerVisibility(visibility: Boolean) {
         binding.includeViewHomeLoadingState.loadingMovie.run {
             isVisible = visibility
-            if(visibility) {
+            if (visibility) {
                 startShimmer()
             } else stopShimmer()
         }
+    }
+
+    private fun initActivity(id: Int) {
+        val intent = Intent(this, DetailsActivity::class.java)
+        intent.putExtra("id", id)
+        startActivity(intent)
     }
 
     companion object {

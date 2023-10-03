@@ -5,14 +5,11 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import com.companysilas.core.domain.model.DataReview
 
-class ReviewsAdapter(
-    private val adapterOnClick: (DataReview) -> Unit
-) : PagingDataAdapter<DataReview, ReviewsViewHolder>(diffCallback ){
+class ReviewsAdapter : PagingDataAdapter<DataReview, ReviewsViewHolder>(diffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewsViewHolder {
         return ReviewsViewHolder.create(
-            parent,
-            adapterOnClick
+            parent
         )
     }
 

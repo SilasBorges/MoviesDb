@@ -11,12 +11,11 @@
         android:id="@+id/text_initial_loading_error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/margin_16"
         android:text="@string/error_loading_data"
         android:textAlignment="center"
-        android:textSize="32sp"
-        app:drawableTopCompat="@drawable/ic_dissatisfied"
-        />
+        android:textSize="@dimen/text_32"
+        app:drawableTopCompat="@drawable/ic_dissatisfied" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_retry"
@@ -24,8 +23,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/background_button_error"
         android:text="@string/common_try_again"
-
-        android:textColor="@color/blue_dark"
-        />
+        android:textColor="@color/blue_dark" />
 
 </LinearLayout>

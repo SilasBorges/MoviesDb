@@ -16,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <include layout="@layout/include_view_details_loading_state" />
 
         <include
@@ -25,7 +24,7 @@
 
         <include
             android:id="@+id/include_error"
-            layout="@layout/include_view_error"/>
+            layout="@layout/include_view_error" />
 
     </ViewFlipper>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@ class NowPlayingViewHolder(
 
         Glide
             .with(context)
-            .load("https://image.tmdb.org/t/p/w500${data.posterPath}")
+            .load(String.format(URL_IMAGE, data.posterPath))
             .placeholder(R.drawable.background_imageload)
             .centerCrop()
             .into(binding.imageMovie)
@@ -30,6 +30,9 @@ class NowPlayingViewHolder(
     }
 
     companion object {
+
+        const val URL_IMAGE = "https://image.tmdb.org/t/p/w500%s"
+
         fun create(
             parent: ViewGroup,
             clickListener: (DataNowPlaying) -> Unit

@@ -15,9 +15,7 @@ class PopularPagingSource(
             val page = params.key ?: 1
 
             val queries = hashMapOf(
-                "language" to LANGUAGE,
-                "page" to page.toString(),
-                "region" to REGION
+                "page" to page.toString()
             )
 
             val paging = apiService.popular(queries)
@@ -48,7 +46,5 @@ class PopularPagingSource(
 
     companion object {
         private const val LIMIT = 20
-        private const val LANGUAGE = "pt-BR"
-        private const val REGION = "BR"
     }
 }

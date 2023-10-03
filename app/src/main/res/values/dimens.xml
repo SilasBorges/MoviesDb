@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- SP - text and String-->
+    <dimen name="text_10">10sp</dimen>
+    <dimen name="text_11">11sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_13">13sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_15">15sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_17">17sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_21">21sp</dimen>
+    <dimen name="text_26">26sp</dimen>
+    <dimen name="text_32">32sp</dimen>
+
+    <!-- elevation-->
+    <dimen name="elevation_background">8dp</dimen>
+    <dimen name="elevation_12">12dp</dimen>
+    <dimen name="elevation_5">5dp</dimen>
+
+    <!-- margin-->
+    <dimen name="margin_login_background">32dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_9">9dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin__15">-15dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+
+    <!-- padding-->
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+
+
+    <!-- title-->
+    <dimen name="text_title_26">26sp</dimen>
+
+    <!-- guideline-->
+    <dimen name="guide_375">375dp</dimen>
+
+</resources>

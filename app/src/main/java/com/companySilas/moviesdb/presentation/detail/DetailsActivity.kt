@@ -15,21 +15,33 @@ import java.time.Duration
 
 class DetailsActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDetailsBinding
+    private var time = NUMBER_0
 
-    private var time = 0
-    private var numberDetail = 0
+    private lateinit var binding: ActivityDetailsBinding
 
     private val viewModel: DetailViewModel by viewModel()
 
     private val reviewsAdapter by lazy {
-        ReviewsAdapter {}
+        ReviewsAdapter()
+    }
+
+    private val movieID by lazy {
+        intent.getIntExtra(ID, NUMBER_0)
+    }
+
+    private fun init() {
+        onClick()
+        observe()
+        viewModel.loading(movieID)
+        initReviews(movieID)
+        initMovieSimilar(movieID)
+        setSharedElementTransitionOnEnter()
     }
 
     private val movieSimilarAdapter by lazy {
         MovieSimilarAdapter {
             val intent = Intent(this, DetailsActivity::class.java)
-            intent.putExtra("id", it.id)
+            intent.putExtra(ID, it.id)
             startActivity(intent)
         }
     }
@@ -37,15 +49,12 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailsBinding.inflate(layoutInflater)
+        init()
         setContentView(binding.root)
-        onClick()
-        observe()
-        val id = intent.getIntExtra("id", 0)
-        numberDetail = id
-        viewModel.loading(id)
-        initReviews(id)
-        initMovieSimilar(id)
-        setSharedElementTransitionOnEnter()
+    }
+
+    private fun onClick() {
+        binding.includeSuccess.imageBack.setOnClickListener { finish() }
     }
 
     @SuppressLint("SetTextI18n")
@@ -61,19 +70,19 @@ class DetailsActivity : AppCompatActivity() {
                     binding.includeSuccess.textTitle.text = uiState.data.title
                     Glide
                         .with(this)
-                        .load("https://image.tmdb.org/t/p/w500${uiState.data.backdropPath}")
+                        .load(String.format(URL_IMAGE, uiState.data.backdropPath))
                         .fitCenter()
                         .into(binding.includeSuccess.imageBanner)
 
                     Glide
                         .with(this)
-                        .load("https://image.tmdb.org/t/p/w500${uiState.data.postPath}")
+                        .load(String.format(URL_IMAGE, uiState.data.postPath))
                         .fitCenter()
                         .into(binding.includeSuccess.imagePoster)
 
                     binding.includeSuccess.textDescSynopsys.text = uiState.data.overview
 
-                    val decimalFormat = DecimalFormat("#.#")
+                    val decimalFormat = DecimalFormat(DECIMAL_FORMAT)
                     val formattedNumber = decimalFormat.format(uiState.data.voteAverage)
 
                     binding.includeSuccess.textVote.text = formattedNumber
@@ -86,7 +95,7 @@ class DetailsActivity : AppCompatActivity() {
                     val minutes = duration.toMinutes() % SECONDS
 
                     binding.includeSuccess.durationTime.text =
-                        hours.toString() + "hora(s) " + minutes.toString() + " minuto(s)"
+                        hours.toString() + FORMAT_HOURS + minutes.toString() + FORMAT_MINUTES
 
                     FLIPPER_CHILD_POSITION_DETAIL
 
@@ -94,9 +103,9 @@ class DetailsActivity : AppCompatActivity() {
 
                 DetailViewModel.State.Error -> {
                     binding.includeError.buttonRetry.setOnClickListener {
-                        viewModel.loading(numberDetail)
-                        initReviews(numberDetail)
-                        initMovieSimilar(numberDetail)
+                        viewModel.loading(movieID)
+                        initReviews(movieID)
+                        initMovieSimilar(movieID)
                     }
 
                     FLIPPER_CHILD_POSITION_ERROR
@@ -108,8 +117,8 @@ class DetailsActivity : AppCompatActivity() {
     private fun initReviews(id: Int) {
         lifecycleScope.launch {
             viewModel.reviewsPagingData(id).collect { pagingData ->
-                    binding.includeSuccess.rvComments.adapter = reviewsAdapter
-                    reviewsAdapter.submitData(pagingData)
+                binding.includeSuccess.rvComments.adapter = reviewsAdapter
+                reviewsAdapter.submitData(pagingData)
             }
         }
     }
@@ -121,10 +130,6 @@ class DetailsActivity : AppCompatActivity() {
                 movieSimilarAdapter.submitData(pagingData)
             }
         }
-    }
-
-    private fun onClick() {
-        binding.includeSuccess.imageBack.setOnClickListener { finish() }
     }
 
     private fun setSharedElementTransitionOnEnter() {
@@ -139,5 +144,13 @@ class DetailsActivity : AppCompatActivity() {
         private const val FLIPPER_CHILD_POSITION_LOADING = 0
         private const val FLIPPER_CHILD_POSITION_DETAIL = 1
         private const val FLIPPER_CHILD_POSITION_ERROR = 2
+
+        private const val NUMBER_0 = 0
+        private const val ID = "id"
+        private const val DECIMAL_FORMAT = "#.#"
+        private const val FORMAT_HOURS = "hora(s) "
+        private const val FORMAT_MINUTES = " minuto(s)"
+
+        private const val URL_IMAGE = "https://image.tmdb.org/t/p/w500%s"
     }
 }

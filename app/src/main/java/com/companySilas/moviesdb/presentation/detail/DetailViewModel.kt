@@ -12,7 +12,6 @@ import com.companySilas.moviesdb.util.watchStatus
 import com.companysilas.core.domain.model.DataNowPlaying
 import com.companysilas.core.domain.model.DataReview
 import com.companysilas.core.domain.response.DetailResponse
-import com.companysilas.core.repository.DetailRepository
 import com.companysilas.core.usecase.DetailUseCase
 import com.companysilas.core.usecase.MovieSimilarUseCase
 import com.companysilas.core.usecase.ReviewsUseCase
@@ -24,7 +23,7 @@ class DetailViewModel(
     private val reviewsUseCase: ReviewsUseCase,
     private val movieSimilarUseCase: MovieSimilarUseCase,
     private val dispatchers: CoroutinesDispatchers
-): ViewModel() {
+) : ViewModel() {
 
     fun reviewsPagingData(id: Int): Flow<PagingData<DataReview>> {
         return reviewsUseCase(
@@ -41,7 +40,7 @@ class DetailViewModel(
     private val action = MutableLiveData<Action>()
     val state: LiveData<State> = action.switchMap {
         liveData(dispatchers.main()) {
-            when(it) {
+            when (it) {
                 is Action.Load -> {
                     detailUseCase.invoke(DetailUseCase.Params(it.id)).watchStatus(
                         loading = {
@@ -62,13 +61,13 @@ class DetailViewModel(
     sealed class Action {
         data class Load(
             val id: Int
-        ): Action()
+        ) : Action()
     }
 
     sealed class State {
-        object Loading: State()
-        data class Success(val data: DetailResponse): State()
-        object Error: State()
+        object Loading : State()
+        data class Success(val data: DetailResponse) : State()
+        object Error : State()
     }
 
     fun loading(id: Int) {

@@ -10,6 +10,8 @@ class AuthInterceptor : Interceptor {
         val originalRequest: Request = chain.request()
         val modifiedUrl = originalRequest.url.newBuilder()
             .addQueryParameter("api_key", Constants.API_KEY)
+            .addQueryParameter("language", Constants.LANGUAGE)
+            .addQueryParameter("region", Constants.REGION)
             .build()
         val newRequest: Request = originalRequest.newBuilder()
             .url(modifiedUrl)

@@ -18,7 +18,8 @@ class ReviewsPagingSource(
 
             val queries = hashMapOf(
                 "language" to LANGUAGE,
-                "page" to page.toString()
+                "page" to page.toString(),
+                "region" to REGION
             )
 
             val paging = apiService.getReviews(id,queries)
@@ -50,5 +51,6 @@ class ReviewsPagingSource(
     companion object {
         private const val LIMIT = 20
         private const val LANGUAGE = "pt-BR"
+        private const val REGION = "BR"
     }
 }

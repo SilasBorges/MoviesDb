@@ -4,14 +4,14 @@ import com.companysilas.core.domain.model.Genre
 import com.google.gson.annotations.SerializedName
 
 data class DetailResponse(
-    val adult: Boolean,
+    @SerializedName("adult") val adult: Boolean,
     @SerializedName("backdrop_path") val backdropPath: String,
-    val genres: List<Genre>,
-    val id: Int,
-    @SerializedName("original_title")val originalTitle: String,
-    val overview: String,
-    @SerializedName("poster_path")val postPath: String,
-    val runtime: Int,
-    val title: String,
-    @SerializedName("vote_average")val voteAverage: Double
+    @SerializedName("genres") val genres: List<Genre>,
+    @SerializedName("id") val id: Int,
+    @SerializedName("original_title") val originalTitle: String,
+    @SerializedName("overview") val overview: String,
+    @SerializedName("poster_path") val postPath: String,
+    @SerializedName("runtime") val runtime: Int,
+    @SerializedName("title") val title: String,
+    @SerializedName("vote_average") val voteAverage: Double
 )

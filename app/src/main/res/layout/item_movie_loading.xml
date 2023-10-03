@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="150dp"
     android:layout_height="220dp"
-    android:layout_margin="4dp"
-    android:elevation="5dp">
+    android:layout_margin="@dimen/margin_4"
+    android:elevation="@dimen/elevation_5">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image_movie"
