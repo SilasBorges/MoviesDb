@@ -12,7 +12,7 @@
 
         <ImageView
             android:id="@+id/image_logo"
-            android:layout_width="60dp"
+            android:layout_width="@dimen/size_60"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_16"
             android:src="@drawable/logo"

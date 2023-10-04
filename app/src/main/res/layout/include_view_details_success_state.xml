@@ -17,7 +17,7 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/image_banner"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="@dimen/size_0"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/guideline2"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
 
             <ImageView
                 android:id="@+id/image_back"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/size_50"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_8"
                 android:layout_marginTop="@dimen/margin_16"
@@ -45,8 +45,8 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/image_poster"
-                android:layout_width="159dp"
-                android:layout_height="203dp"
+                android:layout_width="@dimen/size_159"
+                android:layout_height="@dimen/size_203"
                 android:layout_marginEnd="@dimen/margin_32"
                 android:layout_marginBottom="@dimen/margin_32"
                 android:elevation="@dimen/elevation_12"
@@ -58,7 +58,7 @@
 
             <TextView
                 android:id="@+id/text_title"
-                android:layout_width="150dp"
+                android:layout_width="@dimen/size_150"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_16"
                 android:fontFamily="@font/open_sans"
@@ -136,7 +136,7 @@
 
             <TextView
                 android:id="@+id/text_desc_synopsys"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/size_0"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_16"
                 android:layout_marginTop="@dimen/margin_16"
@@ -162,7 +162,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_comments"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/size_0"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_16"
                 android:layout_marginTop="@dimen/margin_16"

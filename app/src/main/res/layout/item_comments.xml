@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="66dp"
+    android:layout_height="@dimen/size_66"
     android:layout_margin="@dimen/margin_5"
     android:background="@color/blue_dark_200">
 
@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/text_desc_comments"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/size_0"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_6"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- SP - text and String-->
+    <!-- SP - text and String -->
     <dimen name="text_10">10sp</dimen>
     <dimen name="text_11">11sp</dimen>
     <dimen name="text_12">12sp</dimen>
@@ -16,12 +16,12 @@
     <dimen name="text_26">26sp</dimen>
     <dimen name="text_32">32sp</dimen>
 
-    <!-- elevation-->
+    <!-- elevation -->
     <dimen name="elevation_background">8dp</dimen>
     <dimen name="elevation_12">12dp</dimen>
     <dimen name="elevation_5">5dp</dimen>
 
-    <!-- margin-->
+    <!-- margin -->
     <dimen name="margin_login_background">32dp</dimen>
     <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_16">16dp</dimen>
@@ -38,18 +38,30 @@
     <dimen name="margin_20">20dp</dimen>
     <dimen name="margin_5">5dp</dimen>
 
-    <!-- padding-->
+    <!-- padding -->
     <dimen name="padding_5">5dp</dimen>
     <dimen name="padding_6">6dp</dimen>
     <dimen name="padding_15">15dp</dimen>
     <dimen name="padding_10">10dp</dimen>
     <dimen name="padding_16">16dp</dimen>
 
-
-    <!-- title-->
+    <!-- title -->
     <dimen name="text_title_26">26sp</dimen>
 
-    <!-- guideline-->
+    <!-- guideline -->
     <dimen name="guide_375">375dp</dimen>
+    
+    <!-- width and height -->
+    <dimen name="size_0">0dp</dimen>
+    <dimen name="size_50">50dp</dimen>
+    <dimen name="size_60">60dp</dimen>
+    <dimen name="size_66">66dp</dimen>
+    <dimen name="size_90">90dp</dimen>
+    <dimen name="size_100">100dp</dimen>
+    <dimen name="size_150">150dp</dimen>
+    <dimen name="size_159">159dp</dimen>
+    <dimen name="size_203">203dp</dimen>
+    <dimen name="size_220">220dp</dimen>
+    <dimen name="size_300">300dp</dimen>
 
 </resources>

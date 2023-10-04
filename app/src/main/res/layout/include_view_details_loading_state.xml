@@ -23,8 +23,8 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image_poster"
         android:background="@color/blue_dark_10"
-        android:layout_width="159dp"
-        android:layout_height="203dp"
+        android:layout_width="@dimen/size_159"
+        android:layout_height="@dimen/size_203"
         android:layout_marginEnd="@dimen/margin_32"
         android:layout_marginBottom="@dimen/margin_32"
         android:elevation="@dimen/elevation_12"
@@ -35,7 +35,7 @@
 
     <TextView
         android:id="@+id/text_title"
-        android:layout_width="150dp"
+        android:layout_width="@dimen/size_150"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:background="@color/blue_dark_10"
@@ -45,7 +45,7 @@
 
     <TextView
         android:id="@+id/duration_time"
-        android:layout_width="100dp"
+        android:layout_width="@dimen/size_100"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_16"
@@ -56,12 +56,10 @@
 
     <TextView
         android:id="@+id/text_genre"
-        android:layout_width="90dp"
+        android:layout_width="@dimen/size_90"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_2"
-        android:fontFamily="@font/open_sans"
-        android:textColor="@color/gray_light"
         android:textSize="@dimen/text_13"
         android:background="@color/blue_dark_10"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,39 +67,33 @@
 
     <TextView
         android:id="@+id/text_vote_10"
-        android:layout_width="100dp"
+        android:layout_width="@dimen/size_100"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_2"
-        android:fontFamily="@font/open_sans"
         android:background="@color/blue_dark_10"
-        android:textColor="@color/gray_300"
         android:textSize="@dimen/text_13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_genre" />
 
     <TextView
         android:id="@+id/synopsys"
-        android:layout_width="90dp"
+        android:layout_width="@dimen/size_90"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_16"
-        android:fontFamily="@font/open_sans"
         android:background="@color/blue_dark_10"
-        android:textColor="@color/gray_light"
         android:textSize="@dimen/text_21"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
         android:id="@+id/text_desc_synopsys"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_60"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_16"
         android:layout_marginEnd="@dimen/margin_16"
-        android:fontFamily="@font/open_sans"
-        android:textAlignment="viewStart"
         android:textColor="@color/gray_light"
         android:textSize="@dimen/text_21"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,21 +103,19 @@
 
     <TextView
         android:id="@+id/comments"
-        android:layout_width="90dp"
+        android:layout_width="@dimen/size_90"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_16"
-        android:fontFamily="@font/open_sans"
         android:background="@color/blue_dark_10"
-        android:textColor="@color/gray_light"
         android:textSize="@dimen/text_21"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_desc_synopsys" />
 
     <ImageView
         android:id="@+id/rv_comments"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_300"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_16"
         android:layout_marginEnd="@dimen/margin_16"
