@@ -46,14 +46,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+    private fun init() {
         initNowPlaying()
         initUpcoming()
         initPopular()
         initTopRated()
         observeInitialLoadState()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        init()
         setContentView(binding.root)
     }
 
