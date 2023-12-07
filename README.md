@@ -27,12 +27,12 @@ This repository accesses an API that returns films in categories of recent, comi
 Basic functionality: listing of the most popular and top rated upcoming movies showing the movie detail, and handling of states and loading and error.
 
 ## Screenshots:
-<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/2fe80c09-aecb-42b1-9f34-fc8bcbfcd350" width="350">
-<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/ff5f8954-0255-4341-8246-b4faa9892942" width="350">
-!<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/cd713c1c-af5b-40bb-8b32-5264b31e5360" width="350">
-<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/f7dfc02d-1211-4566-a685-4bf7232285a1" width="350">
-<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/9226e467-0d27-4d4f-8bf2-2502e338a394" width="350">
-<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/248a33c1-6de8-45b1-b542-0496b9d9b087" width="350">
+<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/2fe80c09-aecb-42b1-9f34-fc8bcbfcd350" width="300">
+<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/ff5f8954-0255-4341-8246-b4faa9892942" width="300">
+!<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/cd713c1c-af5b-40bb-8b32-5264b31e5360" width="300">
+<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/f7dfc02d-1211-4566-a685-4bf7232285a1" width="300">
+<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/9226e467-0d27-4d4f-8bf2-2502e338a394" width="300">
+<img src="https://github.com/SilasBorges/MoviesDb/assets/49213465/248a33c1-6de8-45b1-b542-0496b9d9b087" width="300">
 
 https://github.com/SilasBorges/MoviesDb/assets/49213465/1dd58420-69db-4ff4-a938-2afdbcfcb24e
 
